@@ -1,0 +1,8 @@
+Photos from Pexels (https://www.pexels.com/license/) - free for commercial use, no attribution required.
+hero-engine.jpg          https://www.pexels.com/photo/a-mechanic-working-on-a-car-engine-27665740/
+service-battery.jpg      https://www.pexels.com/photo/car-battery-with-jumper-cables-attached-32282232/
+service-brakes.jpg       https://www.pexels.com/photo/a-person-fixing-a-car-6870300/
+service-diagnostics.jpg  https://www.pexels.com/photo/man-in-blue-coveralls-standing-beside-an-orange-car-using-an-automotive-diagnostic-tool-6870332/
+service-roadside.jpg     https://www.pexels.com/photo/car-on-road-with-warning-sign-in-evening-5056745/
+engine-work.jpg          https://www.pexels.com/photo/an-auto-mechanic-checking-the-engine-of-a-car-4315570/
+engine-bay.jpg           https://www.pexels.com/photo/mechanic-working-with-car-engine-13065692/

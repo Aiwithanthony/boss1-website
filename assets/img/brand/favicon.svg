@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="643 221 934 934">
+  <rect x="643" y="221" width="934" height="934" rx="187" fill="#1F2638"/>
+  <defs>
+    <mask id="ringcut" maskUnits="userSpaceOnUse" x="-30" y="237" width="3588" height="1171">
+      <rect x="-30" y="237" width="3588" height="1171" fill="#fff"/>
+      <path d="M981.4,301.1 L1238.2,301.1 L1126.8,583.5 L1323.7,583.5 L1092.8,1114.4 L1058.3,763.4 L887.1,763.4 Z" fill="#000" stroke="#000" stroke-width="56" stroke-linejoin="round"/>
+      <path d="M1376.9,453.5 L1527.7,192.3 L1641.1,257.7 L1490.3,519.0 A65.5,65.5 0 0 1 1376.9,453.5 Z" fill="#000"/>
+    </mask>
+  </defs>
+  <g mask="url(#ringcut)" fill="#FFFFFF">
+    <circle cx="1109.8" cy="664.0" r="367.1" fill="none" stroke="#FFFFFF" stroke-width="59.5"/>
+    <circle cx="1441.5" cy="472.5" r="142.9"/>
+  </g>
+  <path d="M981.4,301.1 L1238.2,301.1 L1126.8,583.5 L1323.7,583.5 L1092.8,1114.4 L1058.3,763.4 L887.1,763.4 Z" fill="#E8A93A"/>
+</svg>

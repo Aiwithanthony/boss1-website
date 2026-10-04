@@ -1,0 +1,44 @@
+Options -Indexes
+RewriteEngine On
+
+# Block hidden files and folders (e.g. .git left by Git deployments) and the repository README
+RewriteRule (^|/)\.(?!well-known/) - [F,L]
+RewriteRule ^README\.md$ - [F,L]
+
+# Force HTTPS and drop "www"
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+# Old Shopify URLs -> new pages (keeps Google rankings and shared links working)
+RewriteRule ^products/dstyty/?$ /services [L,R=301]
+RewriteRule ^collections(/.*)?$ /services [L,R=301]
+RewriteRule ^pages/contact/?$ /contact [L,R=301]
+# Old Shopify policy pages were removed - send visitors to the home page
+RewriteRule ^policies(/.*)?$ / [L,R=301]
+RewriteRule ^(privacy-policy|refund-policy|terms-of-service)(\.html)?/?$ / [L,R=301]
+RewriteRule ^blogs(/.*)?$ / [L,R=301]
+RewriteRule ^cart/?$ / [L,R=301]
+
+# Strip .html from URLs, then serve /page from page.html
+RewriteCond %{THE_REQUEST} \s/+([^.\s?]+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [L,R=301]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+ErrorDocument 404 /404.html
+
+# Caching and compression
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml
+</IfModule>
